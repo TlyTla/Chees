@@ -1,0 +1,1 @@
+#include "KingFigure.hpp"
