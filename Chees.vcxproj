@@ -129,12 +129,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ChessPiece.cpp" />
+    <ClCompile Include="ElephantFigure.cpp" />
+    <ClCompile Include="HorseFigure.cpp" />
     <ClCompile Include="KingFigure.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PawnFigure.cpp" />
+    <ClCompile Include="QueenFigure.cpp" />
+    <ClCompile Include="RookFIgure.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChessPiece.hpp" />
+    <ClInclude Include="ElephantFigure.hpp" />
+    <ClInclude Include="HorseFigure.hpp" />
     <ClInclude Include="KingFigure.hpp" />
+    <ClInclude Include="PawnFigure.hpp" />
+    <ClInclude Include="QueenFigure.hpp" />
+    <ClInclude Include="RookFIgure.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
