@@ -19,7 +19,7 @@ public:
 private:
 	char colorChessPiece;
 
-	//функция проверяет правильный ли ход у конкретной фигуры
+	//функция делает ход конкретной фигуры
 	virtual bool CorrectChessMove(int currentLine, int currentСolumn, int whichLine, int whichСolumn, ChessPiece* GameBoard[8][8]) = 0;
 
 };
