@@ -2,7 +2,7 @@
 
 char PawnFigure::GetChessPiece()
 {
-	return "";
+	return 'P';
 }
 
 bool PawnFigure::CorrectChessMove(int currentLine, int current—olumn, int whichLine, int which—olumn, ChessPiece* GameBoard[8][8])

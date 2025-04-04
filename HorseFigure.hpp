@@ -1,5 +1,4 @@
-#ifndef _HORSE_FIGURE_HPP_
-#define _HORSE_FIGURE_HPP_
+#pragma 
 #include "ChessPiece.hpp"
 
 class HorseFigure : public ChessPiece
@@ -12,4 +11,3 @@ private:
 	bool CorrectChessMove(int currentLine, int current—olumn, int whichLine, int which—olumn, ChessPiece* GameBoard[8][8]) override;
 };
 
-#endif // ! _HORSE_FIGURE_HPP_

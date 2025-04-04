@@ -2,7 +2,7 @@
 
 char RookFigure::GetChessPiece()
 {
-	return '';
+	return 'R';
 }
 
 bool RookFigure::CorrectChessMove(int currentLine, int current—olumn, int whichLine, int which—olumn, ChessPiece* GameBoard[8][8])

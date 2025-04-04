@@ -9,6 +9,7 @@
 #include "KingFigure.hpp"
 #include "ElephantFigure.hpp"
 
+
 class Board
 {
 public:
@@ -17,9 +18,13 @@ public:
 
 	void PrintBoard();
 	bool DangerToTheKing(char colorChessPiece);
+	//проверяет может ли игрок сделать какой нибуть правильный ход
+	bool MovePlayer(char colorChessPiece);
 
 protected:
 	ChessPiece* MainGameBoard[8][8];
+
+	friend class StartGame;
 };
 
 #endif // ! _BOARD_HPP_

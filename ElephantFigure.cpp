@@ -2,7 +2,7 @@
 
 char ElephantFigure::GetChessPiece()
 {
-	return '';
+	return 'E';
 }
 
 bool ElephantFigure::CorrectChessMove(int currentLine, int current—olumn, int whichLine, int which—olumn, ChessPiece* GameBoard[8][8])
@@ -29,10 +29,11 @@ bool ElephantFigure::CorrectChessMove(int currentLine, int current—olumn, int wh
             setLine = -1;
         }
 
-        for (int tempLine = currentLine + setLine, int tempCol = current—olumn + setCol; 
+        for (int tempLine = currentLine + setLine, tempCol = current—olumn + setCol; 
             tempLine != whichLine; tempLine +=setLine, tempCol += setCol)
         {
-            if (GameBoard[tempLine][tempCol] != 0) {
+            if (GameBoard[tempLine][tempCol] != 0) 
+            {
                 return false;
             }
         }

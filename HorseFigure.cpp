@@ -2,7 +2,7 @@
 
 char HorseFigure::GetChessPiece()
 {
-    return '';
+    return 'H';
 }
 
 bool HorseFigure::CorrectChessMove(int currentLine, int current—olumn, int whichLine, int which—olumn, ChessPiece* GameBoard[8][8])

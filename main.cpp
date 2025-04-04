@@ -11,7 +11,6 @@ int main()
 
 	StartGame start;
 	start.Start();
-	//господи если ты есть помоги мне я задолбался
 
 	return 0;
 }

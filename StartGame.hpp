@@ -1,5 +1,6 @@
 #ifndef _START_GAME_HPP_
 #define _START_GAME_HPP_
+#include"Board.hpp"
 
 class StartGame
 {
@@ -10,10 +11,11 @@ public:
 	void Start();
 	void NextPlayer();
 	bool GameOver();
-	void PrintBoardAndDesignations();
+	void PrintBoardAndDesignations(ChessPiece* GameBoard[8][8]);
 
 private:
 	char player;
+	Board GameBoard;
 };
 
 #endif // ! _START_GAME_HPP_

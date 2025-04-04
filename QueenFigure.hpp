@@ -1,6 +1,7 @@
 #ifndef _QUEEN_FIGURE_HPP_
 #define _QUEEN_FIGURE_HPP_
 #include "ChessPiece.hpp"
+
 class QueenFigure : public ChessPiece
 {
 public:
