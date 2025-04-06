@@ -60,12 +60,13 @@ void Board::PrintBoard()
         int squareLine = line / heightSquare;
         if (line % 3 == 1) 
         {
-            std::cout << '-' << (char)('1' + 7 - squareLine) << '-';
+            std::cout << '|' << (char)('1' + 7 - squareLine)<< '|';
         }
         else 
         {
             std::cout << "---";
         }
+        
         
         for (int col = 0; col < 8 * widthSquare; ++col) 
         {
@@ -78,14 +79,14 @@ void Board::PrintBoard()
                 }
                 else 
                 {
-                    std::cout << MainGameBoard[7 - squareLine][squareCol]->GetColorChessPiece();
+                    std::cout << MainGameBoard[7 - squareLine][squareCol]->GetChessPiece();
                 }
             }
             else 
             {
                 if ((squareLine + squareCol) % 2 == 1)
                 {
-                    std::cout << '*';
+                    std::cout << '#';
                 }
                 else 
                 {
@@ -100,7 +101,7 @@ void Board::PrintBoard()
     {
         if (line % 3 == 1) 
         {
-            std::cout << "---";
+            std::cout << "  |";
             for (int col = 0; col < 8 * widthSquare; ++col) 
             {
                 int squareCol = col / widthSquare;
@@ -110,7 +111,7 @@ void Board::PrintBoard()
                 }
                 else 
                 {
-                    std::cout << '-';
+                    std::cout << "|";
                 }
             }
             std::cout << std::endl;

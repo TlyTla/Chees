@@ -46,73 +46,82 @@ bool StartGame::GameOver()
 void StartGame::PrintBoardAndDesignations(ChessPiece* GameBoard[8][8])
 {
     bool bValidMove = false;
+
+    std::cout << "1 - Правила\n2 - Играть"<<std::endl;
+    std::string number;
+    std::getline(std::cin, number);
     do 
     {
-        system("clear");
-        std::cout << std::endl << std::endl << "          Welcome to Chess Game Developed by Cppsecrets " << std::endl << std::endl << std::endl;
-        std::cout << "                      Keys to sysmbols used " << std::endl << std::endl << std::endl;
-        std::cout << " * = white space" << std::endl;
-        std::cout << " Blank space = black space" << std::endl;
-        std::cout << " WP = White pawn &  BP = Black pawn" << std::endl;
-        std::cout << " WN = White Knight & BN = Black Knight" << std::endl;
-        std::cout << " WB = White Bishop & BB = Black Bishop" << std::endl;
-        std::cout << " WR = White Rook & BR = Black Rook" << std::endl;
-        std::cout << " WQ = White Queen & BQ = Black Queen" << std::endl;
-        std::cout << " WK = White King & BK =Black King" << std::endl;
-        std::cout << "Rule for move is :" << std::endl;
-        std::cout << "Move by selecting row & column to another valid location using row & column" << std::endl << std::endl << std::endl;
-        this->GameBoard.PrintBoard();
+        if (number == "1")
+        {
+            std::cout << "W - Белые пешки"<<std::endl;
+            std::cout << "B - Черные пешки" << std::endl;
+            std::cout << "K - Король" << std::endl;
+            std::cout << "Q - Королева" << std::endl;
+            std::cout << "P - Пешка" << std::endl;
+            std::cout << "R - Ладья" << std::endl;
+            std::cout << "H - Конь" << std::endl;
+            std::cout << "E - Слон" << std::endl;
+            std::cout << "Вписывать сначало строку потом столб слитно" << std::endl << std::endl << std::endl;
+            number = "2";
+            system("pause");
+        }
+        else 
+        {
+            system("cls");
+            this->GameBoard.PrintBoard();
 
-        int startMove, endMove;
+            int startMove, endMove;
 
-        std::cout << player << "'s Move: ";
-        std::cin >> startMove;
+            std::cout << player << " - Ход.\nКем ходим: ";
+            std::cin >> startMove;
 
-        int startLine = (startMove / 10) - 1, startCol = (startMove % 10) - 1;
+            int startLine = (startMove / 10) - 1, startCol = (startMove % 10) - 1;
 
-        std::cout << "To: ";
-        std::cin >> endMove;
+            std::cout << "Куда ходим: ";
+            std::cin >> endMove;
 
-        int endLine = (endMove / 10) - 1, endCol = (endMove % 10) - 1;
-       
+            int endLine = (endMove / 10) - 1, endCol = (endMove % 10) - 1;
 
-        if ((startLine >= 0 && startLine <= 7) &&
-            (startCol >= 0 && startCol <= 7) &&
-            (endLine >= 0 && endLine <= 7) &&
-            (endCol >= 0 && endCol <= 7)) {
-         
 
-            ChessPiece* qpCurrPiece = GameBoard[startLine][startCol];
-          
-
-            if ((qpCurrPiece != 0) && (qpCurrPiece->GetColorChessPiece() == player))
+            if ((startLine >= 0 && startLine <= 7) && (startCol >= 0 && startCol <= 7)
+                && (endLine >= 0 && endLine <= 7) && (endCol >= 0 && endCol <= 7))
             {
-              
 
-                if (qpCurrPiece->CorrentMove(startLine, startCol, endLine, endCol, GameBoard))
+
+                ChessPiece* qpCurrPiece = GameBoard[startLine][startCol];
+
+
+                if ((qpCurrPiece != 0) && (qpCurrPiece->GetColorChessPiece() == player))
                 {
-                   
-                   
-                    ChessPiece* pFigureMove = GameBoard[endLine][endCol];
-                    GameBoard[endLine][endCol] = GameBoard[startLine][startCol];
-                    GameBoard[startLine][startCol] = 0;
-                    
-                    if (!this->GameBoard.DangerToTheKing(player)) 
+
+
+                    if (qpCurrPiece->CorrentMove(startLine, startCol, endLine, endCol, GameBoard))
                     {
-                        delete pFigureMove;
-                        bValidMove = true;
-                    }
-                    else 
-                    { 
-                        GameBoard[startLine][startCol] = GameBoard[endLine][endCol];
-                        GameBoard[endLine][endCol] = pFigureMove;
+
+
+                        ChessPiece* pFigureMove = GameBoard[endLine][endCol];
+                        GameBoard[endLine][endCol] = GameBoard[startLine][startCol];
+                        GameBoard[startLine][startCol] = 0;
+
+                        if (!this->GameBoard.DangerToTheKing(player))
+                        {
+                            delete pFigureMove;
+                            bValidMove = true;
+                        }
+                        else
+                        {
+                            GameBoard[startLine][startCol] = GameBoard[endLine][endCol];
+                            GameBoard[endLine][endCol] = pFigureMove;
+                        }
                     }
                 }
             }
+            if (!bValidMove)
+            {
+                std::cout << "Неправильный ход!" << std::endl;
+            }
         }
-        if (!bValidMove) 
-        {
-            std::cout << "Неправильный ход!" << std::endl;
-        }
+     
     } while (!bValidMove);
 }

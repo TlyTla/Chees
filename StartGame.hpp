@@ -1,6 +1,7 @@
 #ifndef _START_GAME_HPP_
 #define _START_GAME_HPP_
 #include"Board.hpp"
+#include<string>
 
 class StartGame
 {
