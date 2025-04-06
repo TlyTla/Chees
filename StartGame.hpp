@@ -3,6 +3,7 @@
 #include"Board.hpp"
 #include<string>
 
+//по факту игровой цикл
 class StartGame
 {
 public:
@@ -10,12 +11,17 @@ public:
 	~StartGame() {}
 
 	void Start();
+	//метод свапа игрока
 	void NextPlayer();
+	//метод который завершает игру если шах и мат
 	bool GameOver();
+	//метод который выводит правила, доску с метода другого класса и спрашивает ход игрока
 	void PrintBoardAndDesignations(ChessPiece* GameBoard[8][8]);
 
 private:
+	// ну типа черный игрок или белый
 	char player;
+	// обьект доски
 	Board GameBoard;
 };
 

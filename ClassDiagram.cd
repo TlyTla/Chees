@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ElephantFigure">
+    <Position X="16.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAACAAAAAAAEAA=</HashCode>
+      <FileName>ElephantFigure.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HorseFigure">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAAABAAAEAA=</HashCode>
+      <FileName>HorseFigure.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KingFigure">
+    <Position X="15" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAACAAAAAAAEAQ=</HashCode>
+      <FileName>KingFigure.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PawnFigure">
+    <Position X="7" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAQAAAAEAA=</HashCode>
+      <FileName>PawnFigure.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QueenFigure">
+    <Position X="13" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAACACAAAAAAAEAA=</HashCode>
+      <FileName>QueenFigure.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RookFigure">
+    <Position X="8.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAACAAAEAA=</HashCode>
+      <FileName>RookFIgure.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartGame">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACIAhAAAAAAIAAAgAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>StartGame.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ChessPiece">
+    <Position X="11.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAABAAAAAAAAAAAAAAAABAACCAAAAAAAEAA=</HashCode>
+      <FileName>ChessPiece.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Board">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQIEAAACAAIAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Board.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
